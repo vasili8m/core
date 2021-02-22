@@ -93,6 +93,7 @@ class Manifest(TypedDict, total=False):
     documentation: str
     issue_tracker: str
     quality_scale: str
+    iot_class: str
     mqtt: List[str]
     ssdp: List[Dict[str, str]]
     zeroconf: List[Union[str, Dict[str, str]]]
@@ -403,6 +404,11 @@ class Integration:
     def quality_scale(self) -> Optional[str]:
         """Return Integration Quality Scale."""
         return self.manifest.get("quality_scale")
+
+    @property
+    def iot_class(self) -> Optional[str]:
+        """Return the integration IoT Class."""
+        return self.manifest.get("iot_class")
 
     @property
     def mqtt(self) -> Optional[List[str]]:
