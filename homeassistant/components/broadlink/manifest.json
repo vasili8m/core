@@ -4,5 +4,6 @@
   "documentation": "https://www.home-assistant.io/integrations/broadlink",
   "requirements": ["broadlink==0.16.0"],
   "codeowners": ["@danielhiversen", "@felipediel"],
-  "config_flow": true
+  "config_flow": true,
+  "iot_class": "Local Polling"
 }

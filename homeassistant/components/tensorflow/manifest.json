@@ -9,5 +9,6 @@
     "numpy==1.19.2",
     "pillow==8.1.0"
   ],
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Local Polling"
 }

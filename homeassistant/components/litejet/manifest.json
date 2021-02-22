@@ -3,5 +3,6 @@
   "name": "LiteJet",
   "documentation": "https://www.home-assistant.io/integrations/litejet",
   "requirements": ["pylitejet==0.1"],
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Local Push"
 }

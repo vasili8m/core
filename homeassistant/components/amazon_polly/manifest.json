@@ -3,5 +3,6 @@
   "name": "Amazon Polly",
   "documentation": "https://www.home-assistant.io/integrations/amazon_polly",
   "requirements": ["boto3==1.9.252"],
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Cloud Push"
 }

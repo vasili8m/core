@@ -4,5 +4,6 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/openweathermap",
   "requirements": ["pyowm==3.1.1"],
-  "codeowners": ["@fabaff", "@freekode", "@nzapponi"]
+  "codeowners": ["@fabaff", "@freekode", "@nzapponi"],
+  "iot_class": "Cloud Polling"
 }

@@ -4,5 +4,6 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/griddy",
   "requirements": ["griddypower==0.1.0"],
-  "codeowners": ["@bdraco"]
+  "codeowners": ["@bdraco"],
+  "iot_class": "Cloud Polling"
 }

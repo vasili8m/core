@@ -4,5 +4,6 @@
   "name": "Ezviz",
   "documentation": "https://www.home-assistant.io/integrations/ezviz",
   "codeowners": ["@baqs"],
-  "requirements": ["pyezviz==0.1.5"]
+  "requirements": ["pyezviz==0.1.5"],
+  "iot_class": "Cloud Polling"
 }

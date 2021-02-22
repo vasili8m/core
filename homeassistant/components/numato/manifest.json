@@ -3,5 +3,6 @@
   "name": "Numato USB GPIO Expander",
   "documentation": "https://www.home-assistant.io/integrations/numato",
   "requirements": ["numato-gpio==0.8.0"],
-  "codeowners": ["@clssn"]
+  "codeowners": ["@clssn"],
+  "iot_class": "Local Push"
 }

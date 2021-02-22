@@ -10,5 +10,6 @@
       "manufacturer": "Samsung Electronics"
     }
   ],
-  "codeowners": ["@nielstron"]
+  "codeowners": ["@nielstron"],
+  "iot_class": "Local Polling"
 }

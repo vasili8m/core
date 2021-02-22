@@ -3,5 +3,6 @@
   "name": "Counter",
   "documentation": "https://www.home-assistant.io/integrations/counter",
   "codeowners": ["@fabaff"],
-  "quality_scale": "internal"
+  "quality_scale": "internal",
+  "iot_class": "Calculated"
 }

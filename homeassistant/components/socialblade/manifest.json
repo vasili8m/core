@@ -3,5 +3,6 @@
   "name": "Social Blade",
   "documentation": "https://www.home-assistant.io/integrations/socialblade",
   "requirements": ["socialbladeclient==0.5"],
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Cloud Polling"
 }

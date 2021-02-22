@@ -6,8 +6,15 @@
   "dependencies": ["configurator"],
   "codeowners": ["@bdraco"],
   "dhcp": [
-      {"hostname":"connect","macaddress":"D86162*"},
-      {"hostname":"connect","macaddress":"B8B7F1*"}
+    {
+      "hostname": "connect",
+      "macaddress": "D86162*"
+    },
+    {
+      "hostname": "connect",
+      "macaddress": "B8B7F1*"
+    }
   ],
-  "config_flow": true
+  "config_flow": true,
+  "iot_class": "Cloud Polling"
 }

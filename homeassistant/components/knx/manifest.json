@@ -4,5 +4,6 @@
   "documentation": "https://www.home-assistant.io/integrations/knx",
   "requirements": ["xknx==0.17.0"],
   "codeowners": ["@Julius2342", "@farmio", "@marvin-w"],
-  "quality_scale": "silver"
+  "quality_scale": "silver",
+  "iot_class": "Local Push"
 }

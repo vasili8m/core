@@ -3,5 +3,6 @@
   "name": "HDMI-CEC",
   "documentation": "https://www.home-assistant.io/integrations/hdmi_cec",
   "requirements": ["pyCEC==0.4.14"],
-  "codeowners": ["@newAM"]
+  "codeowners": ["@newAM"],
+  "iot_class": "Local Push"
 }

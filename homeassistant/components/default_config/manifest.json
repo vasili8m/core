@@ -32,5 +32,6 @@
     "zeroconf",
     "zone"
   ],
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Calculated"
 }

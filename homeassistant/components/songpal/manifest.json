@@ -11,5 +11,6 @@
       "manufacturer": "Sony Corporation"
     }
   ],
-  "quality_scale": "gold"
+  "quality_scale": "gold",
+  "iot_class": "Local Push"
 }

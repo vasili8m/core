@@ -3,5 +3,6 @@
   "name": "Geizhals",
   "documentation": "https://www.home-assistant.io/integrations/geizhals",
   "requirements": ["geizhals==0.0.9"],
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Cloud Polling"
 }

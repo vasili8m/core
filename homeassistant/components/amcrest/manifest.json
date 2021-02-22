@@ -4,5 +4,6 @@
   "documentation": "https://www.home-assistant.io/integrations/amcrest",
   "requirements": ["amcrest==1.7.0"],
   "dependencies": ["ffmpeg"],
-  "codeowners": ["@pnbruckner"]
+  "codeowners": ["@pnbruckner"],
+  "iot_class": "Local Polling"
 }

@@ -3,5 +3,6 @@
   "name": "Jewish Calendar",
   "documentation": "https://www.home-assistant.io/integrations/jewish_calendar",
   "requirements": ["hdate==0.9.12"],
-  "codeowners": ["@tsvi"]
+  "codeowners": ["@tsvi"],
+  "iot_class": "Local Polling"
 }

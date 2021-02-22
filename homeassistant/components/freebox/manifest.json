@@ -5,5 +5,6 @@
   "documentation": "https://www.home-assistant.io/integrations/freebox",
   "requirements": ["freebox-api==0.0.9"],
   "after_dependencies": ["discovery"],
-  "codeowners": ["@hacf-fr", "@Quentame"]
+  "codeowners": ["@hacf-fr", "@Quentame"],
+  "iot_class": "Local Polling"
 }

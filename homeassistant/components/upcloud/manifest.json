@@ -4,5 +4,6 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/upcloud",
   "requirements": ["upcloud-api==0.4.5"],
-  "codeowners": ["@scop"]
+  "codeowners": ["@scop"],
+  "iot_class": "Cloud Polling"
 }

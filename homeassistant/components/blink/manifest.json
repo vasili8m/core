@@ -4,5 +4,6 @@
   "documentation": "https://www.home-assistant.io/integrations/blink",
   "requirements": ["blinkpy==0.17.0"],
   "codeowners": ["@fronzbot"],
-  "config_flow": true
+  "config_flow": true,
+  "iot_class": "Cloud Polling"
 }

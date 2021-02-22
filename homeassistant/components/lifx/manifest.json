@@ -7,5 +7,6 @@
   "homekit": {
     "models": ["LIFX"]
   },
-  "codeowners": []
+  "codeowners": [],
+  "iot_class": "Local Polling"
 }

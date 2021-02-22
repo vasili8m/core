@@ -4,5 +4,6 @@
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/gree",
   "requirements": ["greeclimate==0.10.3"],
-  "codeowners": ["@cmroche"]
+  "codeowners": ["@cmroche"],
+  "iot_class": "Local Polling"
 }
