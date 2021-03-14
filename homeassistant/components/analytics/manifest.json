@@ -1,0 +1,7 @@
+{
+  "domain": "analytics",
+  "name": "Analytics",
+  "documentation": "https://www.home-assistant.io/integrations/analytics",
+  "codeowners": ["@home-assistant/core"],
+  "quality_scale": "internal"
+}
