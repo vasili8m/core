@@ -201,36 +201,35 @@ async def test_match_all(hass):
     with patch(
         "homeassistant.components.template.binary_sensor."
         "BinarySensorTemplate._update_state"
-    ) as _update_state:
-        with assert_setup_component(1):
-            assert await setup.async_setup_component(
-                hass,
-                binary_sensor.DOMAIN,
-                {
-                    "binary_sensor": {
-                        "platform": "template",
-                        "sensors": {
-                            "match_all_template_sensor": {
-                                "value_template": (
-                                    "{% for state in states %}"
-                                    "{% if state.entity_id == 'sensor.humidity' %}"
-                                    "{{ state.entity_id }}={{ state.state }}"
-                                    "{% endif %}"
-                                    "{% endfor %}"
-                                ),
-                            },
+    ) as _update_state, assert_setup_component(1):
+        assert await setup.async_setup_component(
+            hass,
+            binary_sensor.DOMAIN,
+            {
+                "binary_sensor": {
+                    "platform": "template",
+                    "sensors": {
+                        "match_all_template_sensor": {
+                            "value_template": (
+                                "{% for state in states %}"
+                                "{% if state.entity_id == 'sensor.humidity' %}"
+                                "{{ state.entity_id }}={{ state.state }}"
+                                "{% endif %}"
+                                "{% endfor %}"
+                            ),
                         },
-                    }
-                },
-            )
+                    },
+                }
+            },
+        )
 
-            await hass.async_start()
-            await hass.async_block_till_done()
-            init_calls = len(_update_state.mock_calls)
+        await hass.async_start()
+        await hass.async_block_till_done()
+        init_calls = len(_update_state.mock_calls)
 
-            hass.states.async_set("sensor.any_state", "update")
-            await hass.async_block_till_done()
-            assert len(_update_state.mock_calls) == init_calls
+        hass.states.async_set("sensor.any_state", "update")
+        await hass.async_block_till_done()
+        assert len(_update_state.mock_calls) == init_calls
 
 
 async def test_event(hass):

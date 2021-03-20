@@ -1347,9 +1347,8 @@ async def test_entry_setup_platform_not_ready(hass: HomeAssistantType):
     with patch(
         "homeassistant.components.cast.media_player._async_setup_platform",
         side_effect=Exception,
-    ) as mock_setup:
-        with pytest.raises(PlatformNotReady):
-            await cast.async_setup_entry(hass, MockConfigEntry(), None)
+    ) as mock_setup, pytest.raises(PlatformNotReady):
+        await cast.async_setup_entry(hass, MockConfigEntry(), None)
 
     assert len(mock_setup.mock_calls) == 1
     assert mock_setup.mock_calls[0][1][1] == {"uuid": "bla"}
