@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import asyncio
-from contextlib import asynccontextmanager
+from contextlib import asynccontextmanager, suppress
 from datetime import datetime, timedelta
 from functools import partial
 import itertools
@@ -427,11 +427,9 @@ class _ScriptRun:
 
         delay = delay.total_seconds()
         self._changed()
-        try:
+        with suppress(asyncio.TimeoutError):
             async with async_timeout.timeout(delay):
                 await self._stop.wait()
-        except asyncio.TimeoutError:
-            pass
 
     async def _async_wait_template_step(self):
         """Handle a wait template."""
@@ -490,10 +488,8 @@ class _ScriptRun:
         async def async_cancel_long_task() -> None:
             # Stop long task and wait for it to finish.
             long_task.cancel()
-            try:
+            with suppress(Exception):
                 await long_task
-            except Exception:  # pylint: disable=broad-except
-                pass
 
         # Wait for long task while monitoring for a stop request.
         stop_task = self._hass.async_create_task(self._stop.wait())

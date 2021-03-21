@@ -1,4 +1,5 @@
 """Support gathering ted5000 information."""
+from contextlib import suppress
 from datetime import timedelta
 import logging
 
@@ -74,10 +75,8 @@ class Ted5000Sensor(Entity):
     @property
     def state(self):
         """Return the state of the resources."""
-        try:
+        with suppress(KeyError):
             return self._gateway.data[self._mtu][self._unit]
-        except KeyError:
-            pass
 
     def update(self):
         """Get the latest data from REST API."""

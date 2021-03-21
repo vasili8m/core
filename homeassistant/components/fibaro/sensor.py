@@ -1,4 +1,6 @@
 """Support for Fibaro sensors."""
+from contextlib import suppress
+
 from homeassistant.components.sensor import DOMAIN
 from homeassistant.const import (
     CONCENTRATION_PARTS_PER_MILLION,
@@ -72,7 +74,7 @@ class FibaroSensor(FibaroDevice, Entity):
             self._unit = None
             self._icon = None
             self._device_class = None
-        try:
+        with suppress(KeyError, ValueError):
             if not self._unit:
                 if self.fibaro_device.properties.unit == "lux":
                     self._unit = LIGHT_LUX
@@ -82,8 +84,6 @@ class FibaroSensor(FibaroDevice, Entity):
                     self._unit = TEMP_FAHRENHEIT
                 else:
                     self._unit = self.fibaro_device.properties.unit
-        except (KeyError, ValueError):
-            pass
 
     @property
     def state(self):
@@ -107,7 +107,5 @@ class FibaroSensor(FibaroDevice, Entity):
 
     def update(self):
         """Update the state."""
-        try:
+        with suppress(KeyError, ValueError):
             self.current_value = float(self.fibaro_device.properties.value)
-        except (KeyError, ValueError):
-            pass

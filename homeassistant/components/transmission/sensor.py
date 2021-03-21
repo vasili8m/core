@@ -1,6 +1,8 @@
 """Support for monitoring the Transmission BitTorrent client API."""
 from __future__ import annotations
 
+from contextlib import suppress
+
 from transmissionrpc.torrent import Torrent
 
 from homeassistant.const import CONF_NAME, DATA_RATE_MEGABYTES_PER_SECOND, STATE_IDLE
@@ -187,8 +189,6 @@ def _torrents_info(torrents, order, limit, statuses=None):
             "status": torrent.status,
             "id": torrent.id,
         }
-        try:
+        with suppress(ValueError):
             info["eta"] = str(torrent.eta)
-        except ValueError:
-            pass
     return infos
